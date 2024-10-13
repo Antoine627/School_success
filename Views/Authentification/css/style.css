@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  /*background-color: steelblue;*/
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.error-message {
+  color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block; 
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+  border-radius: 15px;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* Bande s'étend jusqu'à la moitié du formulaire */
+    background-color: #136ad5;
+    z-index: -1; /* Assurez-vous que la bande est derrière le formulaire */
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px; /* Ajustez la taille du logo selon vos besoins */
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #136ad5;
+}
+
+.container a {
+  text-decoration: none;
+  color: #136ad5;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  background: #136ad5;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #4f81c7;
+  }
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.text {
+  margin-top: 30px;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px #d9d9d9 solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    padding-left: 10px; /* Ajouter padding-left pour les placeholders */
+    font-size: 15px;
+    color: gray;
+    border-bottom: 2px solid #d9d9d9; /* Couleur par défaut de la bordure inférieure */
+}
+
+.form-control input.error {
+    border-bottom: 2px solid red; /* Couleur de la bordure inférieure pour les erreurs */
+  }
+
+.form-control input:focus {
+    outline: none; /* Supprime le contour par défaut du navigateur */
+    border-bottom-color: #136ad5; /* Couleur de la bordure inférieure quand le champ est actif */
+  }
+
+.form-control input::placeholder {
+    color: gray; /* Couleur du texte du placeholder */
+    opacity: 1; /* Assurez-vous que le texte est opaque */
+  }
